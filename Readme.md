@@ -51,7 +51,6 @@ Represents interaction between moisture and temperature, influencing particle gr
 - Python  
 - Pandas, NumPy  
 - Scikit-learn  
-- Xarray  
 - Matplotlib  
 - Power BI (for visualization)  
 
