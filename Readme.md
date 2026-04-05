@@ -1,33 +1,63 @@
-AeroSphinx – Surface-Level PM2.5 Estimation & Forecasting
-AeroSphinx is a project developed for ISRO’s Bhartiya Antariksha Hackathon (BAH 25).
-It focuses on estimating and forecasting surface-level PM2.5 concentrations in Faridabad using:
+# 🌍 AeroSphinx – PM2.5 Estimation & Forecasting
 
-Satellite data (INSAT AOD)
-Ground monitoring data (CPCB)
-Reanalysis data (MERRA-2)
-🔹 Features
-Data preprocessing and integration from heterogeneous sources
-Machine learning pipeline for PM2.5 estimation
-Short-term forecasting models
-Interactive dashboard for real-time visualization
-🔹 Tech Stack
-Python: Pandas, NumPy, Scikit-learn, Matplotlib
-Visualization: PowerBI
-Data Sources: INSAT AOD, CPCB, MERRA-2
-🔹 Additional Insights
-1. Feature Engineering
-We engineered two additional features:
+## 📌 Overview
+AeroSphinx is a machine learning project developed for ISRO’s Bharatiya Antariksha Hackathon (BAH 2025).  
+It focuses on estimating and forecasting surface-level PM2.5 concentrations in Faridabad using multi-source environmental data.
 
-Temperature Difference
-Humidity Ratio
-These were introduced to capture more accurate trends of how temperature and humidity influence PM2.5 levels. Rising temperatures often cause water droplets to settle along with pollutants, thereby reducing concentrations. Conversely, higher humidity tends to increase PM2.5 concentrations, making these features critical for improved predictions.
+---
 
-2. Forecast Horizon
-Our forecasting model is currently designed for a one-day horizon. Specifically, it predicts PM2.5 concentrations around 5:00 PM each evening. For this phase of the project, we focused only on short-term forecasting to ensure robust evaluation of our pipeline.
+## 📊 Data Sources
+- 🛰️ Satellite Data: INSAT AOD  
+- 🌫️ Ground Monitoring: CPCB PM2.5  
+- 🌦️ Reanalysis Data: NASA MERRA-2  
 
-3. Seasonality Trends
-Clear seasonality trends were observed:
+---
 
-Winter (around November): PM2.5 levels increase significantly
-Monsoon season: Concentrations reach their minimum
-These seasonal variations highlight the influence of meteorological conditions on air quality and align with real-world environmental observations.
+## 🚀 Key Features
+- Integration of heterogeneous datasets (satellite + ground + weather)
+- End-to-end ML pipeline for PM2.5 prediction
+- Feature engineering to capture environmental interactions
+- Short-term forecasting (1-day ahead prediction)
+- Dashboard-ready output for visualization
+
+---
+
+## 🧠 Feature Engineering
+We engineered additional features to improve model performance:
+
+### 🔹 Temperature Difference
+Captures atmospheric stability and vertical mixing, affecting pollutant dispersion.
+
+### 🔹 Humidity Ratio
+Represents interaction between moisture and temperature, influencing particle growth.
+
+---
+
+## ⏱️ Forecasting Strategy
+- Predicts PM2.5 for the next day  
+- Focused on short-term forecasting  
+- Designed for evaluation and real-world applicability  
+
+---
+
+## 📈 Seasonal Insights
+- ❄️ Winter: High PM2.5 due to low dispersion  
+- 🌧️ Monsoon: Lower pollution due to washout effect  
+- ☀️ Summer: Moderate levels influenced by wind and temperature  
+
+---
+
+## 🛠️ Tech Stack
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- Xarray  
+- Matplotlib  
+- Power BI (for visualization)  
+
+---
+
+## ⚙️ How to Run
+
+```bash
+python ML_Model.py
